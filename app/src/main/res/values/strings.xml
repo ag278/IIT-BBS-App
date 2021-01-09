@@ -2,4 +2,14 @@
     <string name="app_name">IIT BBS</string>
     <string name="open">open</string>
     <string name="close">close</string>
+    <string name="about">The Students\' Gymkhana is a student body, fostering all student activities at IIT Bhubaneswar
+        and bridging the gap between the students and the authorities. From its genesis in the year 2010, it seeks to
+        cultivate various qualitative approaches amongst students to master an enhanced life and
+        is the nucleus of the numerous extra-curricular, technical and co-curricular activities held in IIT Bhubaneswar</string>
+    <string name="president">President</string>
+    <string name="vice_president">Vice President</string>
+    <string name="gsecs">General Secretaries</string>
+    <string name="gsec_sports">Sports and Games</string>
+    <string name="gsec_science">Science and Technology</string>
+    <string name="gsec_socio">Socio - Cultural</string>
 </resources>
