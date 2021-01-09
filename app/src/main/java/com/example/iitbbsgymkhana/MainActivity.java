@@ -1,6 +1,7 @@
 package com.example.iitbbsgymkhana;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -10,7 +11,10 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.example.iitbbsgymkhana.ui.FragmentBoardofGov;
 import com.example.iitbbsgymkhana.ui.FragmentCampusMap;
@@ -80,6 +84,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.setting_menu, menu);
+        return true;
+    }
+
+
+
+
+    @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         drawerLayout.closeDrawer(GravityCompat.START);
         if(menuItem.getItemId() == R.id.home) {
@@ -90,6 +104,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportActionBar().setTitle("Home");
         }
 
+
+
         if(menuItem.getItemId() == R.id.setting) {
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
@@ -97,6 +113,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             fragmentTransaction.commit();
             getSupportActionBar().setTitle("Settings");
         }
+
 
         if(menuItem.getItemId() == R.id.historyocampus) {
             fragmentManager = getSupportFragmentManager();
@@ -227,7 +244,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             getSupportActionBar().setTitle("ERP");
         }
 
-        if(menuItem.getItemId() == R.id.examinaion) {
+        if(menuItem.getItemId() == R.id.examination) {
             fragmentManager = getSupportFragmentManager();
             fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.fragment_container, new FragmentExamination());
@@ -332,5 +349,31 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         return true;
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId())
+        {
+            case R.id.item1:
+            {
+                Toast.makeText(this, "Settings selected", Toast.LENGTH_SHORT).show();
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new FragmentSettings());
+                fragmentTransaction.commit();
+            }
+                return true;
+            case R.id.item2:
+            {
+                Toast.makeText(this, "My profile selected", Toast.LENGTH_SHORT).show();
+                fragmentManager = getSupportFragmentManager();
+                fragmentTransaction = fragmentManager.beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, new FragmentMyProfile());
+                fragmentTransaction.commit();
+            }
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
