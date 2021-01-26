@@ -8,10 +8,7 @@
                 android:id="@+id/home"
                 android:icon="@drawable/ic_baseline_home_24"
                 android:title="Home" />
-            <item
-                android:id="@+id/setting"
-                android:icon="@drawable/ic_baseline_settings_24"
-                android:title="Settings" />
+
         </menu>
     </item>
 
@@ -19,15 +16,15 @@
         <menu>
             <item
                 android:id="@+id/iitcampus"
-                android:icon="@drawable/ic_baseline_home_24"
+                android:icon="@drawable/logo"
                 android:title="IIT Campus" />
             <item
                 android:id="@+id/historyocampus"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/ic_baseline_history_24"
                 android:title="History of Campus" />
             <item
                 android:id="@+id/vision"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/ic_baseline_visibility_24"
                 android:title="Vision" />
             <item
                 android:id="@+id/boardofgov"
@@ -35,11 +32,11 @@
                 android:title="Board of Governors" />
             <item
                 android:id="@+id/senate"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/senate"
                 android:title="Senate" />
             <item
                 android:id="@+id/reports"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/report"
                 android:title="Reports" />
         </menu>
     </item>
@@ -52,15 +49,15 @@
                 android:title="Fests" />
             <item
                 android:id="@+id/societies"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/society"
                 android:title="Societies" />
             <item
                 android:id="@+id/hostels"
-                android:icon="@drawable/ic_baseline_home_24"
+                android:icon="@drawable/hostel"
                 android:title="Hostels" />
             <item
                 android:id="@+id/scholarship"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/scholarship"
                 android:title="Scholarship" />
             <item
                 android:id="@+id/gymkhana"
@@ -68,11 +65,11 @@
                 android:title="Gymkhana" />
             <item
                 android:id="@+id/councellingteam"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/counselling"
                 android:title="Councelling Team" />
             <item
                 android:id="@+id/convocation"
-                android:icon="@drawable/ic_baseline_home_24"
+                android:icon="@drawable/convocation"
                 android:title="Convocation Archive" />
         </menu>
     </item>
@@ -85,11 +82,11 @@
             android:title="General Info" />
         <item
             android:id="@+id/schools"
-            android:icon="@drawable/ic_baseline_home_24"
+            android:icon="@drawable/ic_baseline_school_24"
             android:title="Schools" />
         <item
-            android:id="@+id/examinaion"
-            android:icon="@drawable/ic_baseline_settings_24"
+            android:id="@+id/examination"
+            android:icon="@drawable/exam"
             android:title="Examination" />
         <item
             android:id="@+id/erp"
@@ -143,15 +140,15 @@
         <menu>
             <item
                 android:id="@+id/campusmap"
-                android:icon="@drawable/ic_baseline_home_24"
+                android:icon="@drawable/ic_baseline_map_24"
                 android:title="Campus Map" />
             <item
                 android:id="@+id/contactus"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/ic_baseline_contact_support_24"
                 android:title="Contact Us" />
             <item
                 android:id="@+id/creators"
-                android:icon="@drawable/ic_baseline_settings_24"
+                android:icon="@drawable/creators"
                 android:title="Creator's Section" />
         </menu>
     </item>

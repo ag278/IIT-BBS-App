@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ui.home.HomeFragment">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutSlider"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPagerImageSlider"
+                android:layout_width="325dp"
+                android:layout_height="300dp"
+                android:paddingStart="30dp"
+                android:paddingEnd="30dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/about_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:padding="10dp"
+            android:text="@string/about"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            android:textAlignment="center"
+            app:fontFamily="sans-serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayoutSlider"
+            android:gravity="center_horizontal" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circleCardView"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintEnd_toStartOf="@+id/circleCardView_vice"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/about_textview">
+
+            <ImageView
+                android:id="@+id/round_image_president"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ahsoka_tano" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circleCardView_vice"
+            android:layout_width="125dp"
+            android:layout_height="125dp"
+            android:layout_marginTop="32dp"
+            app:cardCornerRadius="60dp"
+            android:layout_marginBottom="15dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleCardView"
+            app:layout_constraintTop_toBottomOf="@+id/about_textview">
+
+            <ImageView
+                android:id="@+id/round_image_vice_president"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ahsoka_tano" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/president_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/president"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            app:fontFamily="sans-serif"
+            app:layout_constraintEnd_toEndOf="@+id/circleCardView"
+            app:layout_constraintStart_toStartOf="@id/circleCardView"
+            app:layout_constraintTop_toBottomOf="@+id/circleCardView" />
+
+        <TextView
+            android:id="@+id/vice_president_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/vice_president"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            app:fontFamily="sans-serif"
+            app:layout_constraintEnd_toEndOf="@id/circleCardView_vice"
+            app:layout_constraintStart_toStartOf="@+id/circleCardView_vice"
+            app:layout_constraintTop_toBottomOf="@+id/circleCardView_vice" />
+
+        <TextView
+            android:id="@+id/gsecs_textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/gsecs"
+            android:layout_marginTop="24dp"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            android:fontFamily="sans-serif"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/president_textView"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circleCardView_member1"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintEnd_toStartOf="@+id/circleCardView_member3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/gsecs_textview">
+
+            <ImageView
+                android:id="@+id/round_image_member1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ahsoka_tano" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circleCardView_member2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/circleCardView_member3"
+            app:layout_constraintTop_toBottomOf="@+id/gsecs_textview">
+
+            <ImageView
+                android:id="@+id/round_image_member2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ahsoka_tano" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/circleCardView_member3"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="15dp"
+            app:cardCornerRadius="60dp"
+            app:layout_constraintEnd_toStartOf="@+id/circleCardView_member2"
+            app:layout_constraintStart_toEndOf="@+id/circleCardView_member1"
+            app:layout_constraintTop_toBottomOf="@+id/gsecs_textview">
+
+            <ImageView
+                android:id="@+id/round_image_member3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ahsoka_tano" />
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/gsec_sports"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/gsec_sports"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            app:fontFamily="sans-serif"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/circleCardView_member1"
+            app:layout_constraintStart_toStartOf="@+id/circleCardView_member1"
+            app:layout_constraintTop_toBottomOf="@+id/circleCardView_member1"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/gsec_science"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/gsec_science"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            app:fontFamily="sans-serif"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/circleCardView_member3"
+            app:layout_constraintStart_toStartOf="@+id/circleCardView_member3"
+            app:layout_constraintTop_toBottomOf="@+id/circleCardView_member3"
+            android:gravity="center_horizontal" />
+
+        <TextView
+            android:id="@+id/gsec_socio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/gsec_socio"
+            android:textColor="@color/secondaryColor"
+            android:textSize="15sp"
+            app:fontFamily="sans-serif"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="@id/circleCardView_member2"
+            app:layout_constraintStart_toStartOf="@+id/circleCardView_member2"
+            app:layout_constraintTop_toBottomOf="@+id/circleCardView_member2"
+            android:gravity="center_horizontal" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
